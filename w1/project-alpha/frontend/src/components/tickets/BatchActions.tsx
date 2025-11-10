@@ -24,7 +24,7 @@ export default function BatchActions({
       await batchComplete(selectedIds);
       toast.success(`已标记 ${selectedIds.length} 个 Ticket 为已完成`);
       onClearSelection();
-    } catch (error) {
+    } catch {
       toast.error("批量完成失败");
     } finally {
       setIsProcessing(false);
@@ -47,7 +47,7 @@ export default function BatchActions({
       await batchDelete(selectedIds);
       toast.success(`已删除 ${selectedIds.length} 个 Ticket`);
       onClearSelection();
-    } catch (error) {
+    } catch {
       toast.error("批量删除失败");
     } finally {
       setIsProcessing(false);

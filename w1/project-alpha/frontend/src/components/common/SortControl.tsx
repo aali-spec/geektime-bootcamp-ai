@@ -16,7 +16,9 @@ export default function SortControl() {
     <div className="flex items-center gap-2">
       <Select
         value={sortField}
-        onValueChange={(value: any) => setSortField(value)}
+        onValueChange={(value: "created_at" | "updated_at" | "title") =>
+          setSortField(value)
+        }
       >
         <SelectTrigger className="w-[140px] h-10 rounded-xl border-black/10 bg-white text-[15px] font-medium transition-apple hover:bg-black/5">
           <SelectValue />

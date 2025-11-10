@@ -72,7 +72,7 @@ export default function TicketForm({
         toast.success("Ticket 已创建");
       }
       onOpenChange(false);
-    } catch (error) {
+    } catch {
       toast.error(ticket ? "更新 Ticket 失败" : "创建 Ticket 失败");
     } finally {
       setIsSubmitting(false);

@@ -80,10 +80,10 @@ export const useTicketStore = create<TicketStore>((set, get) => ({
       const response = await ticketApi.list(params);
 
       // Sort tickets
-      let sortedTickets = [...response.tickets];
+      const sortedTickets = [...response.tickets];
       sortedTickets.sort((a, b) => {
-        let aValue: any;
-        let bValue: any;
+        let aValue: string | number;
+        let bValue: string | number;
 
         if (sortField === "title") {
           aValue = a.title.toLowerCase();

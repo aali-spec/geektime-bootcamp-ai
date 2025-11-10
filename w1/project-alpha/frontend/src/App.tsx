@@ -79,7 +79,7 @@ export default function App() {
       await deleteTicket(deletingTicket.id);
       toast.success("Ticket 已删除");
       setDeletingTicket(null);
-    } catch (error) {
+    } catch {
       toast.error("删除 Ticket 失败");
     }
   };

@@ -41,7 +41,7 @@ export default function TagManager() {
       });
       setNewTagName("");
       toast.success("标签创建成功");
-    } catch (error) {
+    } catch {
       toast.error("创建标签失败");
     } finally {
       setIsCreating(false);
@@ -60,7 +60,7 @@ export default function TagManager() {
     try {
       await deleteTag(tagId);
       toast.success("标签已删除");
-    } catch (error) {
+    } catch {
       toast.error("删除标签失败");
     }
   };
