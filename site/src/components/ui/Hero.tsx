@@ -50,12 +50,14 @@ export default function Hero({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="mx-auto max-w-3xl text-body mb-9"
+              className="mx-auto max-w-3xl mb-9"
               style={{
                 color: 'var(--md-ink)',
-                fontSize: '18px',
-                lineHeight: '1.6',
-                textShadow: '1px 1px 2px rgba(255, 255, 255, 0.8)',
+                fontSize: 'clamp(22px, 3vw, 32px)',
+                lineHeight: '1.5',
+                fontWeight: '700',
+                textShadow: '3px 3px 6px rgba(255, 255, 255, 0.95), -2px -2px 4px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5)',
+                letterSpacing: '0.02em',
               }}
             >
               {subtitle}
